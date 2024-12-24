@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(../static/update01.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        label{
+            font-size: larger;
+            color: whitesmoke;
+            padding-right: 10px;
+          }
+          input{
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px ridge whitesmoke;
+            position: relative;
+            right: -20px;
+            color: black;
+            font-size: large;
+          }
+          form{
+            margin-top: 170px;
+            margin-right: 40px;
+            backdrop-filter: blur(15px);
+          }
+          .c{
+            position: relative;
+            right: -37px;
+          }
+          .e{
+            position: relative;
+            right: -9px;
+          }
+          .f{
+            position: relative;
+            right: -33px;
+          }
+          button{
+            width: 120px;
+            height: 40px;
+            font-size: large;
+            border-radius: 15%;
+            background: linear-gradient(rgb(14, 211, 211),whitesmoke);
+          }
+    </style>
+</head>
+<body>
+    <center>
+    <form method="POST">
+        {% csrf_token %}
+    <label for="">FirstName</label><input  class="a" type="text" name="FirstName" value="{{form.FirstName}}"><br><br>
+    <label for="">LastName</label><input class="b" type="text" name="LastName" value="{{form.LastName}}" ><br><br>                                                                                                                                                      
+    <label for="">Email</label><input class="c"  type="email" name="Email" value="{{form.Email}}" ><br><br>
+    <label for="">Password</label><input class="d" type="password" name="Password" value="{{form.Password}}"><br><br>
+    <label for="">Repassword</label><input class="e" type="password" name="Repassword" value="{{form.Repassword}}"><br><br>
+    <label for="">Phone</label><input class="f" type="number" name="Phone" value="{{form.Phone}}"><br><br>
+    <!-- <button>UPDATE</button> -->
+    <!-- <button><a href="/show">UPDATE</a></button> -->
+    <button>UPDATE</button>
+    </form>
+    </center>
+</body>
+</html>

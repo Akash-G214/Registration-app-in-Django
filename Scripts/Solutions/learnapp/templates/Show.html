@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-image:url(../static/hacker\ img.webp) ;
+        background-size: cover;
+        color: whitesmoke;
+        font-size: large;
+    }
+        td{
+            padding:3px;
+            backdrop-filter:blur(10px);
+        }
+        tr{
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- {% csrf_token %} -->
+    
+        <center><h1>WELLCOME TO ADMIN</h1></center>  <br> <br> 
+<center><table border="1px" >
+    <tr>
+        <td>FirstName</td>
+        <td>LastName</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Repassword</td>
+        <td>Phone</td>
+    </tr>
+    {% for i in stu %}
+    <tr>
+    <td>{{i.FirstName}}</td>
+    <td>{{i.LastName}}</td>
+    <td>{{i.Email}}</td>
+    <td>{{i.Password}}</td>
+    <td>{{i.Repassword}}</td>
+    <td>{{i.Phone}}</td>
+    <td><a href="/update/{{i.id}}">update</a></td>
+    <td><a href="/delete/{{i.id}}">delete</a></td>
+</tr>
+    {% endfor %}
+    
+</table>
+</center>
+</body>
+</html>

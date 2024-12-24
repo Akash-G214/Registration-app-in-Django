@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(../static/priminum\ bg.jpg);
+            background-size: cover;
+        }
+        form{
+          
+        
+             position: absolute;
+             left:550px;
+             top: 50px;
+        }
+        label{
+            position: relative;
+            right: -40px;
+            top: 40px;
+            font-size: large;
+        }
+        div{
+            position: relative;
+            right: -140px;
+            top: 20px;
+            font-size: large;
+            color:rgb(223, 50, 84);
+        }
+
+    </style>
+</head>
+<body>
+   <form method="POST">
+        {% csrf_token %}
+        <span  ><h1>{{i.FirstName}}Register Form</h1></span>
+    
+    <label for="">FirstName:</label><div>{{i.FirstName}} </div> <br> <br>
+    <label for="">LastName:</label> <div>{{i.LastName}} </div>  <br> <br> 
+    <label for="">Email:</label> <div> {{i.Email}} </div> <br> <br>
+    <label for="">Password:</label><div>{{i.Password}} </div> <br> <br>
+    <label for="">Repassword:</label><div>{{i.Repassword}}</div> <br> <br>
+    <label for="">Phone:</label><div>{{i.Phone}}</div>
+</form>
+
+</body>
+</html>
